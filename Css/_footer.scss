@@ -1,0 +1,129 @@
+footer{
+    background-color: #171717;
+    color: #7f7f7f;
+    .container-fluid{
+        .row{  
+            &:first-of-type{  padding: 3rem 1rem;
+                &>div{                    
+                    &:first-of-type{
+                        a{
+                            img{
+                                width: 75%;
+                                margin-left: 0.4rem;
+                            }
+                        }
+                        p{
+                            font-size: 14px;
+                            text-align: justify;
+                        }
+                        div{
+                            a{
+                                margin-right: 1.1rem;
+                                i{ color: white; font-size: 14px; }
+                                &:hover{ i{ color: #a4ba28; } }
+                            }
+                            
+                        }
+                    }
+                    h5{
+                        font-size: 18px;
+                        margin: 0 0 24px;
+                        padding-bottom: 16px;
+                        position: relative;
+                        border-bottom: 1px solid #2e2e2e;
+                        color: #fff;
+                        &::after{
+                            height: 3px;
+                            width: 73px;
+                            bottom: -1px;
+                            content: "";
+                            left: 0;
+                            position: absolute;
+                            background-color: white;
+
+                        }
+                    }
+                    &:nth-of-type(2){
+                        ul{
+                            padding-left: 1rem;
+                            li{ 
+                                a{
+                                width: 50%; 
+                                float: left;
+                                position: relative;                                
+                                font-size: 12px;
+                                color: #7f7f7f;
+                                text-decoration: none;
+                                margin: 0.5rem 0rem;
+                                font-family: 'Montserrat';                                &:hover{ color: #a4ba28; }
+                                &:active{ color: #a4ba28; }
+                                &::before{
+                                    position: absolute;
+                                    left: -0.8rem;
+                                    top: 0.35rem;
+                                    content: "\f054";
+                                    font-weight: 900;
+                                    display: inline-block;
+                                    line-height: 1;
+                                    font-size: 10px;
+                                    font-family: 'Font Awesome 5 Free';
+                                }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(3){
+                        ul{
+                            li{               
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                margin: 0.2rem 0rem 0.2rem -0.2rem;
+                                padding: 0.2rem 0rem;
+                                &:first-of-type{margin: 0.5rem 0rem 0.2rem!important;}
+                                *{ display: block;  float: left;  font-size: 12px; }
+                                i{ margin: 0rem 0.8rem; color: #a4ba28;}
+                                span{ border-left: 1px solid #fff; padding: 0.2rem 0rem;  padding-left: 0.5rem; }
+                                
+                            }
+                        }
+                    }
+                    &:last-of-type{
+                        a{
+                            font-family: 'Montserrat';
+                            font-weight: 500;
+                            font-size: 13px;
+                            color: white;
+                            text-decoration: none;
+                            &:hover{ color: #a4ba28; }
+                        }
+                        p{
+                            font-family: 'Montserrat';
+                            font-weight: 500;
+                            font-size: 12px;
+                            color: #7f7f7f;
+                            text-decoration: none;
+                            i{
+                                margin: 0rem; margin-right: 0.8rem; color: #a4ba28;
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-of-type{
+                padding: 1.8rem 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media (max-width: 992px){ justify-content: space-between; }
+                border-top: 0.8px solid #7f7f7f;
+                div{
+                    font-family: 'Montserrat';
+                    font-size: 14px;
+                    color: #7f7f7f;
+                    a{ text-decoration: none;  &:hover{ color: #a4ba28; } }
+                }
+            }
+        }
+    }
+}

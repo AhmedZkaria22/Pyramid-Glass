@@ -1,0 +1,263 @@
+@import 'header';
+@import 'footer';
+@import 'general';
+
+@keyframes pgAnmy{
+    from{ left: 98%; }
+    to{ left: -98%; }
+}
+ 
+.home_slider{ overflow: hidden;
+    .carousel-item{
+        background:{
+            repeat: no-repeat;
+            size: cover;
+            position: 100% 100%;
+        }
+        padding: 6rem 4rem;
+        height: 100vh;
+        &:first-of-type{
+            background-image: url("../Assets/Images/slide-recycle.jpg");
+        }
+        &:nth-of-type(2){
+            background-image: url("../Assets/Images/wine-cooler-06.jpg");
+        }
+        &:last-of-type{
+            background-image: url("../Assets/Images/slide-home-elephant1.jpg");
+        }
+        h6{
+            font-size: 20px;
+            font-weight: 400;
+            color: rgb(0, 132, 183);
+            font-family: Montserrat;
+        }
+        h2{
+            font-size: 50px;
+            line-height: 50px;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            font-family: Montserrat;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+            font-family: "PT Sans";
+            max-width: 45%;
+            margin-bottom: 2rem;
+        }
+        button{
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(48, 48, 48);
+            font-family: roboto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 3px;
+            padding: 0.4rem 1.5rem;
+            border: none;
+            &:first-of-type{ background-color: #0084b7;  color: white;  margin-right: 1.5rem; }
+        }
+
+    }
+    @media(max-width: 768px){
+        .carousel-item{
+            padding: 6rem 3rem;
+            h6{ font-size: 18px; }
+            h2{ font-size: 40px; }
+            p{ font-size: 13px; }
+            button{ font-size: 12px; }
+        }
+        .carousel-control-prev{ left: -1rem!important; }
+        .carousel-control-next{ right: -1rem!important; }
+
+    }
+    .carousel-control-prev{ left: -3rem; }
+    .carousel-control-next{ right: -3rem; }
+}
+
+.home_slider_footer{
+    overflow: hidden;
+    padding: 1.6rem 0.8rem;
+    background-color: #0084b7;
+    position: relative;
+    p{  color: white;  position: absolute; top: 0.5rem; right: auto;
+        margin-bottom: 0%;  font-size: 24px;    font-family: 'PT Sans';
+        width: calc(100% - 1.6rem);
+        animation: pgAnmy 15s linear infinite;
+    }
+
+    @media(max-width: 830px){ 
+        padding: 2.5rem 0.8rem; 
+        p{ animation: pgAnmy 10s linear infinite; }
+    }
+}
+
+.productSteps{
+    .row{
+        .productSteps_item{
+            img{}
+            h6{
+
+            }
+            p{
+            font-size: 14px;
+            font-weight: 400;
+            color: #898989;
+            font-family: "PT Sans";    
+            }
+        }    
+    }
+}
+.products-container{
+    background:{
+        repeat: no-repeat;
+        size: cover;
+        position: 100% 100%;
+        image: url("../Assets/Images/pyramid-glass-HD-720p.mp4_snapshot_09.58.jpg");
+    }   
+    padding-top: 2.5rem;
+    padding-bottom: 5.5rem;
+    margin-bottom: 1.5rem;
+    .products{
+    
+        .products_nav{
+            ul{
+                background-color: #0084b7;
+                width: 100%;
+                li{
+                    float: left;
+                    button{
+                        padding: 0.7rem 0.65rem;
+                        font-size: 11px !important;
+                        background-color: transparent;
+                        color: white;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .products_item_container{
+            flex-wrap: nowrap;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(4, 24%);
+            @media(max-width: 899.9px){ grid-template-columns: repeat(2, 48%); }
+            justify-content: space-between;
+            .products_item {
+                position: relative;
+                padding: 0;
+                @media(max-width: 899.9px){ margin-bottom: 1.5rem; }            
+                &::before {
+                content: "";
+                background: rgba(34, 34, 34, 0.6);
+                position: absolute;
+                left: 0%;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transition: all linear 0.3s;
+                z-index: 2;
+                opacity: 0;
+                }
+                &:hover{
+                &::before { opacity: 1; }
+                .products_item_overlay { opacity: 1; } 
+                }
+                .products_item_overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0%;//5
+                    width: 100%;//90.5
+                    height: 100%;
+                    opacity: 0;
+                    transition: all linear 0.3s;
+                    z-index: 2;
+                    padding-top: 33%;
+                    padding-left: 5%;
+                    p {
+                        color: #a4ba28;
+                        font-size: 14px;
+                        margin: 0;       
+                        font-family: 'Montserrat';
+                        font-weight: 500;   
+                    }
+                    button{
+                        background-color: #89c218;
+                        color: #ffffff;
+                    }          
+                }  
+                img { width: 100%; }  
+            }
+        }
+        .products_controll{
+            width: 100%;
+            clear: both;
+            display: flex;
+            justify-content: center;    align-items: center;
+            margin: 0.5rem 0;
+            button{
+                background-color: #0084b7 !important;
+                color: white;
+                opacity: 1;
+                border: 1px solid white;
+                border-radius: 5px;
+                &:hover{ opacity: 0.4; }
+                &:first-of-type{ margin-right: 0.5rem; }
+                i{
+                    color: white;
+                    background: transparent;
+                    padding: 0.7rem 0.45rem;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.factoryTour{
+    h3{}
+    .owl-carousel{
+        .owl-stage-outer{
+            .owl-item{
+                .item{
+                    img{}
+                }
+            }    
+        }
+        .owl-nav{
+            position: relative;
+            height: 1rem;
+            width: 100%;
+            clear: both;
+            button{
+                position: absolute;
+                top: -4.5rem;
+                &.owl-prev{ left: -1rem; }
+                &.owl-next{ right: -1rem; }
+            }
+        }
+    }
+}
+
+.home_file{
+    background-color: #0084b7 !important;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    *{ display: block;  float: left;  color: white; font-size: 18px;}
+    p{        
+        font-weight: 500;
+        color: #fff;
+        font-family: 'Montserrat';  
+        margin-bottom: 0rem; 
+        @media(max-width: 992px){ margin-bottom: 0.8rem; }
+    }
+    button{
+        background-color: #89c218;
+        border: none;
+        padding: 0.5rem 1.4rem;
+        a{ display: block;  text-decoration: none;  font-size: 14px; color: white;}
+        &:hover{ background-color: #64910a; }
+    }
+}

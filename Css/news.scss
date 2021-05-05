@@ -1,0 +1,50 @@
+@import './header';
+@import './footer';
+@import './general';
+.news{
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    justify-content: space-between;
+    margin: 3rem 1.5rem 6rem;
+    @media(max-width: 899.9px){ 
+        grid-template-columns: repeat(1, 94%); 
+        justify-content: space-around;
+    }
+    @media(max-width: 699.9px){ 
+        grid-template-columns: repeat(1, 98%); 
+        justify-content: space-around;
+    }
+
+    .card{
+        margin-bottom: 4.5rem;
+        img{}
+        .card-body{ padding: 0;
+            .card-title{ 
+                padding: 1.25rem;
+                padding-bottom: 0; 
+                font-family: 'Montserrat';
+                font-size: 22px;
+            }
+            .card-text{
+                border: 1px solid #e5e5e5;
+                border-right: none;
+                border-left: none;
+                padding: 0.5rem 1.25rem;
+                font-size: 11px;
+                color: #898989;
+                span{  margin-right: 15px;
+                    i{ color: #a4ba28; margin-right: 5px;}
+                }
+            }
+            a{ 
+                margin: 3.5rem 1.25rem -0.9rem; 
+                background-color: #64910a;
+                color: #ffffff;
+                font-size: 12px;
+                padding: 11px 28px;
+                border: none;
+                &:hover{ background-color: #242424; }
+            }
+        }
+    }
+}

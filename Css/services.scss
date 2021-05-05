@@ -1,0 +1,170 @@
+@import './header';
+@import './footer';
+@import './general';
+
+.breadcrumb{ margin-bottom: 0rem; }
+
+* p{
+    font-size: 14px;
+    //margin: 0 0 24px;
+    font-family: 'PT Sans';
+    font-weight: 500;
+    color: #898989;
+}
+
+.services_overview{
+    @media(max-width: 576px){ padding: 0 2rem; }
+    .row{
+        &>.col-lg-3{
+            p{
+                font-size: 16px;
+                margin: 0 0 24px;
+                font-family: 'Montserrat';
+                font-weight: 500;
+                color: #000;
+            }
+            ul{
+                margin-bottom: 3.5rem;                
+                li{
+                    i{
+                        color: #a4ba28;
+                        display: block;
+                        float: left;
+                        margin: 0rem 1.0rem;
+                        margin-right: 1.5rem;
+                    }
+                    background-color: #f7f7f7;
+                    border-radius: 5px;
+                    margin-bottom: 7px;
+                    display: flex;
+                    align-items: center;
+                    //padding: 0px 10px;
+                    padding-left: 0!important;
+                    padding: 10px;
+                    font-size: 14px;
+                    position: relative;
+                    /*&:first-of-type{
+                        padding: 10px;
+                    }*/
+                    &::before{
+                        content: "";
+                        width: 1px;
+                        height: 100%;
+                        background-color: #e1e2e2;
+                        position: absolute;   top: 0;  left: 2.5rem;
+                    }
+                }
+            }            
+            button{
+                background-color: #0084b7;   color: white;   border: none;  border-radius: 5px;
+                padding: 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                *{ display: block;  float: left; font-size: 0.7rem;  color: white; padding: 0.8rem; font-size: 14px;}
+                i{ font-size: 16px; }
+                a{                    
+                    font-family: 'PT Sans';
+                    font-weight: 500;
+                    text-decoration: none;
+                    border-left: 1px solid #e1e2e2;
+                }
+            }
+        }
+        &>.col-lg-9{
+            border-left: 1px solid #e1e2e2;
+            @media (max-width: 991.9px){ border-left: none; }
+            h4{
+                font-size: 24px;
+                margin: 25px 0px 40px;
+                font-family: 'Montserrat';
+                font-weight: 500;
+            }
+            .services_case{
+                padding: 0!important;
+                #accordion{
+                    .card{
+                        .card-header{
+                            padding: 0;
+                            button{
+                                margin: 0;  padding: 0;
+                                width: 100%;
+                                background-color: white;                                
+                                border: none;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;            
+                                border-radius: 0;                    
+                                &:hover{ *{color: #a4ba28;} }
+                                &:focus{ box-shadow: none;  outline: none; }
+                                *{ display: block;  float: left; color: #000;}
+                                span{       padding: 1rem 1.5rem;
+                                    i{ font-size: 12px;
+                                        &:first-of-type{ display: block; }
+                                        &:last-of-type{ display: none; }
+                                    }
+                                }
+                                p{
+                                    font-size: 14px;
+                                    font-family: 'Montserrat';
+                                    font-weight: 500;
+                                    margin-bottom: 0;
+                                    padding: 1rem;
+                                    border-left: 1px solid gray;
+                                }
+                                &[aria-expanded=true]{
+                                    background-color: #a4ba28;
+                                    *{color: white;}
+                                    i{
+                                        &:first-of-type{ display: none; }
+                                        &:last-of-type{ display: block; }
+                                    }
+                                    &:hover{ *{color: white;} }
+                                }
+                            }
+                        }
+                        .card-body{
+                            font-size: 14px;
+                            font-family: 'PT -Sans';
+                            font-weight: 500;
+                            color: #898989;
+                            background-color: #f8f9f9;
+                            border-radius: 0;                    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.services_poster{
+    img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 93vh;
+    }
+    .services_poster_controll{        
+        padding: 1.2rem 1.5em;
+        clear: both;
+        margin: 0rem 0rem 1rem;
+        *{ display: block;  float: right; }
+        span{ float: left; }
+        button{
+            i{}
+            &:nth-of-type(n+2){ display: none; }
+            @media (max-width: 900px){ &:nth-of-type(n+2){ display: block; } }
+        }
+    }
+    .services_poster_items{
+        padding: 0.5rem 0.2rem;
+        display: grid;
+        grid-template-columns: repeat(6, 15%);
+        justify-content: space-between;
+        img{ max-width: 100%;  height: auto; cursor: pointer; border-radius: 5px;
+            &:hover{ border: 3px solid #a4ba28; }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import './header';
+@import './footer';
+@import './general';
+
+
+.about_hero{
+    margin: 6rem 0rem!important;
+    padding: 0rem 3rem;
+    .row{
+        h4{
+            position: relative;
+            padding: 0rem 3rem;
+            &::before{
+                content: "Our company";
+                position: absolute;
+                left: 3rem;
+                top: -1.2rem;
+                color: #c9c9c9;
+                display: block;
+                font-size: .72em;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: none;                
+            }
+        }
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            color: #898989;
+            font-family: "PT Sans";    
+            &:first-of-type{ color: #000000; font-style: italic; }
+        }
+        img{}
+    }
+}
+.about_overview{
+    //@media(max-width: 768px){ padding: 0 3rem; }
+    h4{
+        
+    }
+    div{
+        position: relative;
+        margin-left: 4rem;
+        padding-left: 1.8rem;
+        padding-bottom: 1.8rem;
+        &::before, &::after{
+            position: absolute;
+            content: "";
+        }
+        &::before{
+            top: 0.5rem;
+            left: -1rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: #a4ba28;
+        }
+        &::after{
+            width: 1.5px;
+            height: 95%;
+            background-color: #e4e4e4;
+            left: -0.8rem;
+            top: 1rem;
+        }
+        &:last-of-type::after{ display: none; }
+        h6{
+            margin-bottom: 13px;
+            margin-top: 2px;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            color: #898989;
+            font-family: "PT Sans";   
+        }
+    }
+}
+/*.about_file{
+    background-color: cornflowerblue;
+    //overflow: auto;
+    height: 3.8rem;
+    padding: 1rem 4em;
+    position: relative;
+    *{ display: block;  float: left; }
+    i{ color: white; margin-right: 15px; font-size: 1.7rem;}
+    p{
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        font-family: 'Montserrat';  
+        margin-bottom: 0; 
+    }
+    button{
+        background-color: black;
+        color: white;
+        position: absolute;
+        bottom: -0.5rem;
+        right: 2rem;
+        border-radius: 15px;
+        border: none;
+        padding: 0.6rem 1.5rem;
+        *{ display: block;  float: left; color: white; font-size: 0.7rem; }
+        i{ margin-right: 10px; margin-top: 2px; }
+        a{ text-decoration: none; }
+    }
+}*/

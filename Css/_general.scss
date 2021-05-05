@@ -1,0 +1,117 @@
+*{ box-sizing: border-box; }
+
+.banner-section{
+    background: {
+        image: url("../Assets/Images/bred-300x40.jpg");
+        size: 100% 100%;
+        repeat: no-repeat;        
+        position: center center;
+    };
+    overflow: auto;   position: relative;
+    /*&::before{
+        background-color: rgba(0, 0, 0, 0.4);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;*/
+        h1{ color: white; }
+    //}    
+}
+
+.breadcrumb{
+    background-color: #0084b7;  border-radius: 0;
+    padding: 12px 30px;
+    .breadcrumb-item{ font:{ family: 'Montserrat'; size: 13px; }
+        a{ color: #000000; text-decoration: none; }        
+    }
+    .active{ color: #fff;  &::before{ color: inherit; } }
+}
+
+.desc-section{
+    margin: 6rem 0rem 2.5rem !important;
+    padding: 0rem 2rem;
+    h4{
+        position: relative;
+        padding: 0rem 3rem;
+        &::before{
+            content: "What we do";
+            position: absolute;
+            left: 3rem;
+            top: -1.2rem;
+            color: #c9c9c9;
+            display: block;
+            font-size: .72em;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: none;
+        }
+    }
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        font-style: italic;
+        color: #000;
+        font-family: "PT Sans";    
+    }
+}  
+
+.file-section{
+    background-color: #0084b7 !important;
+    width: 100%;
+    clear: both;
+    //overflow: auto;
+    //height: 3.8rem;
+    @media (max-width: 992px) and (min-width: 569.9px){ p{margin-right: 3.5rem!important;} }
+    @media (max-width: 570px) and (min-width: 400px){ //height: 6.4rem; 
+        button{
+            bottom: -1rem!important;
+            right: 1rem!important;
+        }
+        p{
+            margin-right: 0rem!important;
+        }
+    }
+    padding: 1rem 4em;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    *{ display: block;  float: left; }
+    i{ color: white; margin-right: 15px; font-size: 1.7rem;}
+    p{
+        font-size: 17px;
+        font-weight: 500;
+        color: #fff;
+        font-family: 'Montserrat';  
+        margin-bottom: 0; 
+        width: calc(100% - 40px);
+        margin-right: 7.5rem;
+    }
+    button{
+        background-color: #242424;
+        color: white;
+        position: absolute;
+        bottom: -0.5rem;
+        right: 2rem;
+        border-radius: 5px;
+        border: none;
+        padding: 0.8rem 1.4rem;
+        width: 9rem;
+        *{ display: block;  float: left; color: white; font-size: 0.7rem; }
+        i{ margin-right: 10px; margin-top: 2px; }
+        a{ text-decoration: none; }
+        &:hover{ background-color: white;  *{ color: #242424; } }
+    }
+}
